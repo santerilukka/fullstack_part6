@@ -23,16 +23,10 @@ const anecdoteSlice = createSlice({
   }
 })
 
-export const createAnecdote = (content) => {
+export const createAnecdote = content => {
   return async dispatch => {
-    const newAnecdote = {
-      content,
-      id: getId(),
-      votes: 0
-    }
-    dispatch(
-      appendAnecdote(newAnecdote)
-    )
+    const newAnecdote = await anecdoteService.createNew(content, getId())
+    dispatch(appendAnecdote(newAnecdote))
   }
 }
 
