@@ -12,9 +12,9 @@ const AnecdoteList = () => {
       return state.anecdotes.filter(a => a.content.includes(state.filter))
     })
   
-    const vote = (id) => {
-      dispatch(showNotification(`You voted for '${anecdotes.find(a => a.id === id).content}'`))
-      dispatch(addVote(id))
+    const vote = async (anecdote) => {
+      dispatch(addVote(anecdote.id))
+      dispatch(showNotification(`You voted for '${anecdote.content}'`))
     }
     const sortedAnecdotes = [...anecdotes].sort((a, b) => b.votes - a.votes)
 
@@ -28,7 +28,7 @@ const AnecdoteList = () => {
               </div>
               <div>
                 has {anecdote.votes}
-                <button onClick={() => vote(anecdote.id)}>vote</button>
+                <button onClick={() => vote(anecdote)}>vote</button>
               </div>
             </div>
           )}
