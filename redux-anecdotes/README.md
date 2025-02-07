@@ -1,8 +1,29 @@
-# React + Vite
+# Redux Anecdotes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This subproject is part of the Full Stack Open course, Part 6. It is a React application using Redux for state management.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Install dependencies:
+    ```sh
+    npm install
+    ```
+
+2. Start the development server:
+    ```sh
+    npm run dev
+    ```
+
+3. Start the JSON server:
+    ```sh
+    npm run server
+    ```
+
+## Features
+
+- Fetches and displays anecdotes
+- Allows voting on anecdotes
+- Creates new anecdotes with validation
+- Displays notifications for actions
+
+For more details, visit the [Full Stack Open course](https://fullstackopen.com/osa6).
